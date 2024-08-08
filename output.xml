@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-08-08T22:03:25.785320" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\terk\Desktop\ROBOT\test.robot">
+<test id="s1-t1" name="Login Test" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-08T22:03:26.089835" level="INFO">Opening browser 'chrome' to base url 'https://www.soccersuck.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-08T22:03:26.089835" elapsed="34.954758"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-08T22:04:01.045090" elapsed="0.036208"/>
+</kw>
+<kw name="Input Username">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-08T22:04:01.083283" level="INFO">Typing text 'terk2416' into text field 'id=header_email'.</msg>
+<arg>id=header_email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-08T22:04:01.082788" elapsed="0.099844"/>
+</kw>
+<status status="PASS" start="2024-08-08T22:04:01.082290" elapsed="0.100342"/>
+</kw>
+<kw name="Input Password">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-08T22:04:01.183624" level="INFO">Typing text 't029069070' into text field 'id=header_pass'.</msg>
+<arg>id=header_pass</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-08T22:04:01.183128" elapsed="0.099731"/>
+</kw>
+<status status="PASS" start="2024-08-08T22:04:01.183128" elapsed="0.100227"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-08T22:04:01.283850" level="INFO">Clicking element 'xpath=//div[contains(@class, 'header_login')]'.</msg>
+<arg>xpath=//div[contains(@class, 'header_login')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-08T22:04:01.283850" elapsed="0.068944"/>
+</kw>
+<status status="PASS" start="2024-08-08T22:04:01.283355" elapsed="0.069439"/>
+</kw>
+<kw name="Verify Login Success">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 'header_user_name') and contains(text(), 'terk2416')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-08-08T22:04:01.353290" elapsed="0.346209"/>
+</kw>
+<status status="PASS" start="2024-08-08T22:04:01.352794" elapsed="0.346705"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-08T22:04:11.700798" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-08T22:04:01.699994" elapsed="10.000804"/>
+</kw>
+<kw name="Verify Logout Success">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-08T22:04:11.701790" level="INFO">Clicking element 'xpath=//div[contains(@class, 'header_logout')]'.</msg>
+<arg>xpath=//div[contains(@class, 'header_logout')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-08T22:04:11.701294" elapsed="0.915214"/>
+</kw>
+<status status="PASS" start="2024-08-08T22:04:11.701294" elapsed="0.915214"/>
+</kw>
+<status status="PASS" start="2024-08-08T22:03:26.088815" elapsed="46.528190"/>
+</test>
+<status status="PASS" start="2024-08-08T22:03:25.786808" elapsed="46.831190"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
