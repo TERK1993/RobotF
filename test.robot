@@ -36,5 +36,5 @@ Verify Login Success
     Wait Until Page Contains Element    xpath=//div[contains(@class, 'header_user_name') and contains(text(), 'terk2416')]
 
 Verify Logout Success
-    Click Element    xpath=//div[contains(@class, 'header_logout')]D
+    Click Element    xpath=//div[contains(@class, 'header_logout')]
 
