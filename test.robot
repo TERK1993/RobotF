@@ -10,7 +10,6 @@ ${PASSWORD}  t029069070
 Login Test
     Open Browser    ${URL}    chrome
     #...    options=add_experimental_option("detach", True) ไม่ปิด browser
-
     Maximize Browser Window  # ทำให้หน้าต่างเบราว์เซอร์เต็มจอ
     Input Username
     Input Password
@@ -18,7 +17,7 @@ Login Test
     Verify Login Success
     Sleep    10s
     Verify Logout Success
-    
+    Go To   https://www.facebook.com/
 
 *** Keywords ***
 Input Username
@@ -36,5 +35,4 @@ Verify Login Success
     Wait Until Page Contains Element    xpath=//div[contains(@class, 'header_user_name') and contains(text(), 'terk2416')]
 
 Verify Logout Success
-    Click Element    xpath=//div[contains(@class, 'header_logout')]qwfq;ihfoqhgoqwg
-
+    Click Element    xpath=//div[contains(@class, 'header_logout')]
